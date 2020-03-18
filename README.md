@@ -4,10 +4,10 @@ NetMan stands for Network Manager. It is a program implemented in Python for man
 
 ## Installation
 
-You can clone the repository using [git clone](https://github.com/wh0th3h3llam1/NetMan)
+You can clone the repository using [git clone](https://github.com/wh0th3h3llam1/NetMan.git)
 
 ```bash
-git clone https://github.com/wh0th3h3llam1/NetMan
+git clone https://github.com/wh0th3h3llam1/NetMan.git
 ```
 
 ## Contributing
