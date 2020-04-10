@@ -17,7 +17,3 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/) License
-
-
-![wh0am1](https://tryhackme-badges.s3.amazonaws.com/wh0am1.png "wh0am1")
-<script src="https://tryhackme.com/badge/27250"></script>
