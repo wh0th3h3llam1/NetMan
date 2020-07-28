@@ -11,21 +11,21 @@
 
 function setup()
 {
-	# install wget if not found
+	# Install wget if not found
 	if ! [ -x "$(command -v wget)" ]; then
 		echo -e "[SETUP] Installing 'wget'...\n\n"
 		sudo apt-get install wget
 		echo -e "\n\n"
 	fi
 
-	# install at package if not found
+	# Install at package if not found
 	if ! [ -x "$(command -v at)" ]; then
 		echo -e "[SETUP] Installing 'AT'...\n\n"
 		sudo apt-get install at
 		echo -e "\n\n"
 	fi
 
-	# install sox if not found
+	# Install sox if not found
 	if ! [ -x "$(command -v sox)" ]; then
 		echo -e "[SETUP] Installing 'sox'...\n\n"
 		sudo apt-get install sox
