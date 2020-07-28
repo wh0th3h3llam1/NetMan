@@ -9,6 +9,32 @@
 # By default, the script will play iphone-msg-tone when internet is lost.
 
 
+function setup()
+{
+	# install wget if not found
+	if ! [ -x "$(command -v wget)" ]; then
+		echo -e "[SETUP] Installing 'wget'...\n\n"
+		sudo apt-get install wget
+		echo -e "\n\n"
+	fi
+
+	# install at package if not found
+	if ! [ -x "$(command -v at)" ]; then
+		echo -e "[SETUP] Installing 'AT'...\n\n"
+		sudo apt-get install at
+		echo -e "\n\n"
+	fi
+
+	# install sox if not found
+	if ! [ -x "$(command -v sox)" ]; then
+		echo -e "[SETUP] Installing 'sox'...\n\n"
+		sudo apt-get install sox
+		sudo apt-get install sox libsox-fmt-all
+		echo -e "\n\n"
+	fi
+}
+
+
 function init()
 {
 	flag=0
@@ -63,7 +89,7 @@ function net_check()
 	done
 }
 
-
+setup
 init
 net_check
 
