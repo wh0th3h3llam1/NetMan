@@ -32,6 +32,23 @@ function setup()
 		sudo apt-get install sox libsox-fmt-all
 		echo -e "\n\n"
 	fi
+
+	# Download the Notification Sound if this is first time
+	# Add alias to the bashrc file
+	if ! [ -f ~/NetMan/hike-msg-tone.wav ]; then
+		echo -e "Downloading Notification Sounds...\n\n"
+
+		touch ~/NetMan/hike-msg-tone.wav | wget -O ~/NetMan/hike-msg-tone.wav "https://raw.githubusercontent.com/wh0th3h3llam1/NetMan/master/hike-msg-tone.wav"
+
+		touch ~/NetMan/iphone-msg-tone.wav | wget -O ~/NetMan/iphone-msg-tone.wav "https://raw.githubusercontent.com/wh0th3h3llam1/NetMan/master/iphone-msg-tone.wav"
+
+
+
+		sudo echo "alias netman=\"sh ~/NetMan/netcheck.sh\"" >> ~/.bashrc
+
+		source ~/.bashrc
+		echo -e "\n\n"
+	fi
 }
 
 
