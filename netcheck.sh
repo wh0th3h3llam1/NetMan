@@ -11,12 +11,12 @@
 
 function logo()
 {
-	echo "			_	   ___					_ "
+	echo "          _      ___                  _ "
 	echo "__      _| |__  / _ \  __ _ _ __ ___ / |"
 	echo "\ \ /\ / / '_ \| | | |/ _\` | '_ \` _ \| |"
 	echo " \ V  V /| | | | |_| | (_| | | | | | | |"
 	echo "  \_/\_/ |_| |_|\___/ \__,_|_| |_| |_|_|"
-	echo "										v0.1"
+	echo "                                    v0.1"
 }
 
 
@@ -117,9 +117,9 @@ function net_check()
 }
 
 logo
-setup
-init
-net_check
+# setup
+# init
+# net_check
 
 
 # wh0am1
