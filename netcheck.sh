@@ -9,6 +9,17 @@
 # By default, the script will play iphone-msg-tone when internet is lost.
 
 
+function logo()
+{
+	echo "			_	   ___					_ "
+	echo "__      _| |__  / _ \  __ _ _ __ ___ / |"
+	echo "\ \ /\ / / '_ \| | | |/ _\` | '_ \` _ \| |"
+	echo " \ V  V /| | | | |_| | (_| | | | | | | |"
+	echo "  \_/\_/ |_| |_|\___/ \__,_|_| |_| |_|_|"
+	echo "										v0.1"
+}
+
+
 function setup()
 {
 	# Install wget if not found
@@ -41,7 +52,6 @@ function setup()
 		touch ~/NetMan/hike-msg-tone.wav | wget -O ~/NetMan/hike-msg-tone.wav "https://raw.githubusercontent.com/wh0th3h3llam1/NetMan/master/hike-msg-tone.wav"
 
 		touch ~/NetMan/iphone-msg-tone.wav | wget -O ~/NetMan/iphone-msg-tone.wav "https://raw.githubusercontent.com/wh0th3h3llam1/NetMan/master/iphone-msg-tone.wav"
-
 
 
 		sudo echo "alias netman=\"sh ~/NetMan/netcheck.sh\"" >> ~/.bashrc
@@ -88,17 +98,17 @@ function net_check()
 			# killall notify-send
 			if [[ $flag -eq '0' ]]; then
 				notify-send "The Network is Down" "You will be Notified when Internet is Restored." -t 2500 --hint=int:transient:1
-				# Make sure you keep the
-				play "~/Music/iphone-msg-tone.wav" > /dev/null
+
+				# Make sure you keep the file in $HOME/Music/
+				play "$HOME/Music/iphone-msg-tone.wav" > /dev/null
 
 			else
 				notify-send "Your Internet Connection has been Restored." "You can surf the Internet now." -t 2500 --hint=int:transient:1
-				# Make sure you keep the
-				play "~/Music/hike-msg-tone.wav" > /dev/null
+
+				# Make sure you keep the file in $HOME/Music/
+				play "$HOME/Music/hike-msg-tone.wav" > /dev/null
 
 			fi
-			# play "~/Music/iphone (mp3cut.net).wav" > /dev/null
-			# play "~/Music/iphone.mp3" > /dev/null
 		fi
 
 		sleep $delay;
@@ -106,9 +116,13 @@ function net_check()
 	done
 }
 
+logo
 setup
 init
 net_check
 
 
-#wh0am1
+# wh0am1
+
+# Written by : wh0am1
+# v0.1
