@@ -8,6 +8,7 @@
 # By default, the script will play hike-msg-tone when internet is restored.
 # By default, the script will play iphone-msg-tone when internet is lost.
 
+# Version 0.1
 
 function logo()
 {
@@ -97,13 +98,13 @@ function net_check()
 			prev=$flag
 			# killall notify-send
 			if [[ $flag -eq '0' ]]; then
-				notify-send "The Network is Down" "You will be Notified when Internet is Restored." -t 2500 --hint=int:transient:1
+				notify-send "The Network is Down" "You will be Notified when Internet is Restored" -t 2500 --hint=int:transient:1
 
 				# Make sure you keep the file in $HOME/Music/
 				play "$HOME/Music/iphone-msg-tone.wav" > /dev/null
 
 			else
-				notify-send "Your Internet Connection has been Restored." "You can surf the Internet now." -t 2500 --hint=int:transient:1
+				notify-send "Your Internet Connection has been Restored." "You can surf the Internet now" -t 2500 --hint=int:transient:1
 
 				# Make sure you keep the file in $HOME/Music/
 				play "$HOME/Music/hike-msg-tone.wav" > /dev/null
@@ -117,9 +118,9 @@ function net_check()
 }
 
 logo
-# setup
-# init
-# net_check
+setup
+init
+net_check
 
 
 # wh0am1
