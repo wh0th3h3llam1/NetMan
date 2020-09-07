@@ -1,6 +1,6 @@
 # NetMan
 
-NetMan stands for Network Manager. It is a script implemented in Bash & Python for Linux and Batch Script for Windows to  manage Network for Linux and Windows Systems.
+NetMan stands for Network Manager. It is a script implemented in Bash / Python for Linux & Batch / PowerShell for Windows to manage Network for Linux and Windows Systems.
 
 ## Installation
 
