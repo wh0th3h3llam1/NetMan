@@ -11,5 +11,3 @@ else
 
 	Write-Output "Can't Install Module Without Administrator Access!"
 }
-
-PAUSE
